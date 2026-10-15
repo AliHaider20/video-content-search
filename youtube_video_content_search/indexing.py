@@ -116,12 +116,13 @@ def _load_embedding_model(model_name: str, device: str | None = None) -> Sentenc
     model_kwargs: dict = {"default_task": "retrieval", "modality": "vision"}
     if selected_device == "cuda":
         model_kwargs["dtype"] = torch.bfloat16
-    return SentenceTransformer(
+    st_model = SentenceTransformer(
         model_name,
         trust_remote_code=True,
         device=selected_device,
         model_kwargs=model_kwargs,
     ).to(selected_device)
+    return st_model
 
 
 def embed_videos(
