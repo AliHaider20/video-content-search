@@ -15,10 +15,10 @@ if _src.exists() and str(_src) not in sys.path:
 import gradio as gr
 import torch
 
-from youtube_video_content_search.clips import trim_video
-from youtube_video_content_search.indexing import load_index, search_records
-from youtube_video_content_search.logging_config import configure_logging
-from youtube_video_content_search.vector_store import load_faiss_index, search_faiss_records
+from src.clips import trim_video
+from src.indexing import load_index, search_records
+from src.logging_config import configure_logging
+from src.vector_store import load_faiss_index, search_faiss_records
 
 
 ROOT = Path(__file__).resolve().parent
