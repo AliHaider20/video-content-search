@@ -1,0 +1,17 @@
+v_clips/
+a_clips/
+__pycache__/
+*.pyc
+.venv/
+.python-version
+video_embeddings.json
+video_embeddings.faiss
+video_embeddings.metadata.json
+clips.json
+*.webm
+*.mp4
+web_socket.js
+uv.lock
+search_embeddings.ipynb 
+pyproject.toml
+ENVIRONMENT.md
